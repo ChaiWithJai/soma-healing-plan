@@ -418,6 +418,189 @@
             margin-top: 0;
         }
 
+        /* Audio Player */
+        .audio-section {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .audio-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            margin: 12px 0;
+        }
+
+        .audio-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent), var(--healing-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .audio-info {
+            flex: 1;
+        }
+
+        .audio-info h5 {
+            font-size: 14px;
+            margin: 0 0 4px;
+            color: var(--text-primary);
+        }
+
+        .audio-info p {
+            font-size: 12px;
+            margin: 0;
+            color: var(--text-secondary);
+        }
+
+        .audio-player {
+            width: 100%;
+            height: 40px;
+            margin-top: 8px;
+        }
+
+        audio {
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background: var(--bg-primary);
+        }
+
+        /* Assessment Section */
+        .assessment-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .assessment-domain {
+            margin: 24px 0;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .domain-motor {
+            background: rgba(52, 211, 153, 0.1);
+            border: 1px solid rgba(52, 211, 153, 0.2);
+        }
+
+        .domain-cognitive {
+            background: rgba(96, 165, 250, 0.1);
+            border: 1px solid rgba(96, 165, 250, 0.2);
+        }
+
+        .domain-attitudinal {
+            background: rgba(167, 139, 250, 0.1);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+        }
+
+        .domain-label {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .domain-motor .domain-label {
+            background: rgba(52, 211, 153, 0.2);
+            color: var(--healing-green);
+        }
+
+        .domain-cognitive .domain-label {
+            background: rgba(96, 165, 250, 0.2);
+            color: var(--healing-blue);
+        }
+
+        .domain-attitudinal .domain-label {
+            background: rgba(167, 139, 250, 0.2);
+            color: #a78bfa;
+        }
+
+        .assessment-question {
+            margin: 16px 0;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .assessment-question label {
+            display: block;
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .assessment-question input[type="range"] {
+            width: 100%;
+            margin: 8px 0;
+            accent-color: var(--accent);
+        }
+
+        .scale-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .belief-statement {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .belief-statement:last-child {
+            border-bottom: none;
+        }
+
+        .belief-checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .belief-checkbox:hover {
+            background: var(--accent-glow);
+        }
+
+        .belief-checkbox.checked {
+            background: var(--accent);
+        }
+
+        .belief-checkbox.checked::after {
+            content: '✓';
+            color: white;
+            font-size: 14px;
+        }
+
         /* Footer */
         footer {
             padding: 60px 0;
@@ -485,11 +668,13 @@
         <div class="container">
             <div class="nav-inner">
                 <a href="#profile">Profile</a>
+                <a href="#audio">Audio</a>
                 <a href="#week1">Week 1</a>
                 <a href="#week2">Week 2</a>
                 <a href="#week3">Week 3</a>
                 <a href="#week4">Week 4</a>
                 <a href="#tracking">Tracking</a>
+                <a href="#assessment">Assessment</a>
                 <a href="#beyond">Beyond</a>
             </div>
         </div>
@@ -545,6 +730,109 @@
                 <li>Rebuild emotional resilience</li>
                 <li>Reclaim athletic identity through new practices</li>
             </ul>
+        </section>
+
+        <!-- Audio Library -->
+        <section id="audio">
+            <h2>Healing Audio Library</h2>
+            <p>These SOMA Breath tracks are specifically selected for your healing journey. Use with headphones for full effect.</p>
+
+            <div class="audio-section">
+                <h3>Daily Practice Tracks</h3>
+
+                <div class="audio-card">
+                    <div class="audio-icon">
+                        <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="audio-info">
+                        <h5>SOMA Daily Dose Meditation</h5>
+                        <p>22 minutes | Your core daily practice</p>
+                        <audio controls class="audio-player">
+                            <source src="audio/soma-daily-dose.mp3" type="audio/mpeg">
+                            Your browser does not support audio.
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="audio-card">
+                    <div class="audio-icon">
+                        <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="audio-info">
+                        <h5>5-5 Heart Coherence</h5>
+                        <p>10 minutes | Foundation breathing</p>
+                        <audio controls class="audio-player">
+                            <source src="audio/5-5-heart-coherence.mp3" type="audio/mpeg">
+                            Your browser does not support audio.
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="audio-card">
+                    <div class="audio-icon">
+                        <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="audio-info">
+                        <h5>2:4 Fear Control Breathing</h5>
+                        <p>10 minutes | Surgery anxiety protocol</p>
+                        <audio controls class="audio-player">
+                            <source src="audio/2-4-fear-control.mp3" type="audio/mpeg">
+                            Your browser does not support audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="audio-section">
+                <h3>Deep Healing Sessions</h3>
+
+                <div class="audio-card">
+                    <div class="audio-icon">
+                        <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="audio-info">
+                        <h5>Journey Into White Light</h5>
+                        <p>45 minutes | Cellular regeneration - use on weekends</p>
+                        <audio controls class="audio-player">
+                            <source src="audio/journey-white-light.mp3" type="audio/mpeg">
+                            Your browser does not support audio.
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="audio-card">
+                    <div class="audio-icon">
+                        <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="audio-info">
+                        <h5>Color Breathing Visualization</h5>
+                        <p>20 minutes | Direct healing energy to your knee</p>
+                        <audio controls class="audio-player">
+                            <source src="audio/color-breathing.mp3" type="audio/mpeg">
+                            Your browser does not support audio.
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="audio-card">
+                    <div class="audio-icon">
+                        <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="audio-info">
+                        <h5>Mind Movie Meditation</h5>
+                        <p>15 minutes | Visualize your healed self</p>
+                        <audio controls class="audio-player">
+                            <source src="audio/mind-movie.mp3" type="audio/mpeg">
+                            Your browser does not support audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h4>Audio Setup Note</h4>
+                <p>These audio tracks need to be downloaded from your SOMA Breath member portal and placed in the <code>audio/</code> folder. The files should be named exactly as shown above, or you can update the source paths.</p>
+            </div>
         </section>
 
         <!-- Week 1 -->
@@ -831,6 +1119,174 @@
                     <li>Less anxiety about surgery</li>
                     <li>Warmth/tingling during visualizations (blood flow)</li>
                 </ul>
+            </div>
+        </section>
+
+        <!-- Assessment -->
+        <section id="assessment">
+            <h2>Weekly Self-Assessment</h2>
+            <p>This protocol addresses three nested learning domains. True healing requires progress in all three. Use this assessment weekly to track your transformation.</p>
+
+            <div class="assessment-card">
+                <!-- Motor Skills Domain -->
+                <div class="assessment-domain domain-motor">
+                    <span class="domain-label">Motor Skills</span>
+                    <h4>Physical Practice Checkpoints</h4>
+                    <p>The foundation layer - can your body perform the techniques?</p>
+
+                    <div class="assessment-question">
+                        <label>MBHT Score (Morning Breath Hold Time)</label>
+                        <input type="range" min="10" max="120" value="25" id="mbht-score">
+                        <div class="scale-labels">
+                            <span>10 sec (poor)</span>
+                            <span>40 sec (healthy)</span>
+                            <span>60+ sec (optimal)</span>
+                            <span>90+ sec (elite)</span>
+                        </div>
+                    </div>
+
+                    <div class="assessment-question">
+                        <label>Hindu Squat Depth (without knee pain)</label>
+                        <input type="range" min="1" max="5" value="2" id="squat-depth">
+                        <div class="scale-labels">
+                            <span>1: Quarter depth</span>
+                            <span>3: Half depth</span>
+                            <span>5: Full depth</span>
+                        </div>
+                    </div>
+
+                    <div class="assessment-question">
+                        <label>Consecutive Practice Days This Week</label>
+                        <input type="range" min="0" max="7" value="3" id="practice-days">
+                        <div class="scale-labels">
+                            <span>0 days</span>
+                            <span>3-4 days</span>
+                            <span>7 days</span>
+                        </div>
+                    </div>
+
+                    <div class="milestone">
+                        <h4>Motor Skill Targets</h4>
+                        <ul class="checklist">
+                            <li>Week 1: MBHT 25-35 sec, 10 quarter-depth squats</li>
+                            <li>Week 2: MBHT 35-45 sec, 15 half-depth squats</li>
+                            <li>Week 3: MBHT 45-55 sec, 20 squats with breath sync</li>
+                            <li>Week 4: MBHT 50+ sec, consistent daily practice</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cognitive Strategy Domain -->
+                <div class="assessment-domain domain-cognitive">
+                    <span class="domain-label">Cognitive Strategy</span>
+                    <h4>Understanding Checkpoints</h4>
+                    <p>The knowledge layer - do you understand WHY and HOW these techniques heal?</p>
+
+                    <div class="assessment-question">
+                        <label>Can you explain how diaphragmatic breathing activates the parasympathetic system?</label>
+                        <input type="range" min="1" max="5" value="2" id="understand-parasympathetic">
+                        <div class="scale-labels">
+                            <span>1: Not at all</span>
+                            <span>3: Basic grasp</span>
+                            <span>5: Could teach it</span>
+                        </div>
+                    </div>
+
+                    <div class="assessment-question">
+                        <label>Can you explain why psoas release (Hindu squats) helps MCL healing?</label>
+                        <input type="range" min="1" max="5" value="2" id="understand-psoas">
+                        <div class="scale-labels">
+                            <span>1: Not at all</span>
+                            <span>3: Basic grasp</span>
+                            <span>5: Could teach it</span>
+                        </div>
+                    </div>
+
+                    <div class="assessment-question">
+                        <label>Can you describe what happens during "Journey Into White Light" at the cellular level?</label>
+                        <input type="range" min="1" max="5" value="1" id="understand-cellular">
+                        <div class="scale-labels">
+                            <span>1: Not at all</span>
+                            <span>3: Basic grasp</span>
+                            <span>5: Could teach it</span>
+                        </div>
+                    </div>
+
+                    <div class="protocol-box">
+                        <h4>Key Concepts to Master</h4>
+                        <ol>
+                            <li><strong>Parasympathetic activation:</strong> Slow breathing activates "rest & digest" mode - essential for tissue repair</li>
+                            <li><strong>Psoas-knee connection:</strong> The psoas connects to hip flexion; chronic tension pulls the hip, affecting knee alignment and MCL stress</li>
+                            <li><strong>Mitochondrial healing:</strong> ATP (cellular energy) increases during breath holds → biophoton release → cellular regeneration</li>
+                            <li><strong>Neuroplasticity:</strong> Visualization creates neural pathways that guide physical healing</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Attitudinal Change Domain -->
+                <div class="assessment-domain domain-attitudinal">
+                    <span class="domain-label">Attitudinal Change</span>
+                    <h4>Belief & Identity Inventory</h4>
+                    <p>The deepest layer - has your relationship with your body and injury transformed?</p>
+
+                    <p style="margin-top: 16px; font-size: 14px; color: var(--text-secondary);">Select the statements that feel TRUE for you right now:</p>
+
+                    <div class="belief-statement" onclick="this.querySelector('.belief-checkbox').classList.toggle('checked')">
+                        <div class="belief-checkbox"></div>
+                        <span>"My body has the capacity to heal itself"</span>
+                    </div>
+
+                    <div class="belief-statement" onclick="this.querySelector('.belief-checkbox').classList.toggle('checked')">
+                        <div class="belief-checkbox"></div>
+                        <span>"I am not defined by my injury"</span>
+                    </div>
+
+                    <div class="belief-statement" onclick="this.querySelector('.belief-checkbox').classList.toggle('checked')">
+                        <div class="belief-checkbox"></div>
+                        <span>"I trust the healing process more than I fear the outcome"</span>
+                    </div>
+
+                    <div class="belief-statement" onclick="this.querySelector('.belief-checkbox').classList.toggle('checked')">
+                        <div class="belief-checkbox"></div>
+                        <span>"I am someone who takes care of my body daily"</span>
+                    </div>
+
+                    <div class="belief-statement" onclick="this.querySelector('.belief-checkbox').classList.toggle('checked')">
+                        <div class="belief-checkbox"></div>
+                        <span>"Surgery is a choice, not a sentence"</span>
+                    </div>
+
+                    <div class="belief-statement" onclick="this.querySelector('.belief-checkbox').classList.toggle('checked')">
+                        <div class="belief-checkbox"></div>
+                        <span>"I have control over my healing journey"</span>
+                    </div>
+
+                    <div class="belief-statement" onclick="this.querySelector('.belief-checkbox').classList.toggle('checked')">
+                        <div class="belief-checkbox"></div>
+                        <span>"I see myself as an athlete again"</span>
+                    </div>
+
+                    <div class="belief-statement" onclick="this.querySelector('.belief-checkbox').classList.toggle('checked')">
+                        <div class="belief-checkbox"></div>
+                        <span>"The work I'm doing matters and is making a difference"</span>
+                    </div>
+
+                    <div class="milestone">
+                        <h4>Attitudinal Milestones</h4>
+                        <ul class="checklist">
+                            <li>Week 1: At least 2 statements feel true</li>
+                            <li>Week 2: At least 4 statements feel true</li>
+                            <li>Week 3: At least 6 statements feel true</li>
+                            <li>Week 4: All 8 statements feel authentic and true</li>
+                        </ul>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>The Real Healing Target</h4>
+                        <p>Physical techniques are the vehicle. Cognitive understanding is the roadmap. <strong>But attitudinal shift is the actual transformation.</strong></p>
+                        <p style="margin-top: 12px;">If your MBHT improves but your beliefs don't shift, the healing will plateau. If your beliefs transform, the physical healing follows naturally.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
